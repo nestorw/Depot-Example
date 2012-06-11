@@ -11,7 +11,7 @@ Product.delete_all
 Product.create(title: 'War and Peace',
 	description:
 	%{<p>bla bla bla bal blaaaa</p>},
-	image_url: 'war.jpg',
+	image_url: 'rails.png',
 	price: 10000.00)
 
 	
