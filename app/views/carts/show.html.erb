@@ -8,5 +8,5 @@
   <% end %>
 </ul>
 
-<%= link_to 'Edit', edit_cart_path(@cart) %> |
-<%= link_to 'Back', carts_path %>
+<%= button_to 'Empty cart', @cart, method: :delete,
+    confirm: 'Are you sure you want to delete the entire cart?' %>
