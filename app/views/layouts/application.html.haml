@@ -1,0 +1,24 @@
+%html
+  %head
+    %title Books Online Store
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tag
+
+  %body{:class => controller.controller_name}
+    #banner
+      = image_tag("logo.png")
+      = @page_title || "Pragmatic Bookshelf"
+    #columns
+      #side
+        %ul
+          %li
+            = link_to 'Home', store_path
+          %li
+            %a{:href => "http://www..../faq"}Questions
+          %li
+            %a{:href => "http://www..../news"}News
+          %li
+            %a{:href => "http://www..../contact"}Contact
+          %li= Time.now.strftime "It's %m/%d/%Y %I:%M%p"
+  #main= yield
