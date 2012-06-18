@@ -11,6 +11,7 @@
       = @page_title || "Pragmatic Bookshelf"
     #columns
       #side
+        = yield :sidebar
         %ul
           %li
             = link_to 'Home', store_path
@@ -21,4 +22,4 @@
           %li
             %a{:href => "http://www..../contact"}Contact
           %li= Time.now.strftime "It's %m/%d/%Y %I:%M%p"
-  #main= yield
+      #main= yield

@@ -25,15 +25,14 @@
   background: #141;
 
   #main {
-    margin-left: 17em;
-    padding: 1em;
     background: white;
+    float: left;
+    width: 75%;
   }
 
   #side {
     float: left;
-    padding: 1em 2em;
-    width: 13em;
+    width: 20%;
     background: #141;
 
     ul {

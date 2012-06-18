@@ -77,9 +77,13 @@ class CartsController < ApplicationController
   # DELETE /carts/1
   # DELETE /carts/1.json
   def destroy
-    @cart = current_cart
+    if current_cart.id == params[:id].to_i
+      @cart = current_cart
+      session[:cart_id] = nil
+    else
+      @cart = Cart.find(params[:id])
+    end
     @cart.destroy
-    session[:cart_id] = nil
     respond_to do |format|
       format.html { redirect_to store_url,
         notice: 'Your cart is currently empty'}
