@@ -1,8 +1,7 @@
-%h2 Your Cart
-%table
-  -@cart.line_items.each do |item|
-    %tr= render(@cart.line_items)
-    %tr.total_line
-      %td{:colspan => "2"}Total 10
-      %td.total_cell= number_to_currency(@cart.total_price) 11 
-= button_to 'Empty cart', @cart, method: :delete, confirm: 'Are you sure you want to delete the enti    re cart?'
+%h2#cart_title Your Cart
+%table#cart
+  = render(cart.line_items)
+  %tr#total_line
+    %td{:colspan => "3"}Total
+    %td#total_cell= number_to_currency(cart.total_price)
+= button_to 'Empty cart', cart, method: :delete, confirm: 'Are you sure you want to delete the entire cart?'

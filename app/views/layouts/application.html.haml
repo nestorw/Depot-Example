@@ -11,7 +11,8 @@
       = @page_title || "Pragmatic Bookshelf"
     #columns
       #side
-        = yield :sidebar
+        -if @cart
+          #cart= render @cart
         %ul
           %li
             = link_to 'Home', store_path

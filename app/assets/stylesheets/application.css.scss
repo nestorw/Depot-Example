@@ -32,4 +32,49 @@
   background-color: #f0f0f0;
   font: bold smaller sans-serif;
 }
+#columns {
+  background: #141;
 
+  #main {
+    padding: 1em;
+    background: white;
+  }
+
+  #side {
+    float: left;
+    padding: 1em 2em;
+    width: 13em;
+    background: #141;
+
+    form, div {
+      display: inline;
+    }
+    input {
+      font-size: small;
+    }
+
+    #cart {
+      font-size: smaller;
+      color:     white;
+
+      table {
+        border-top:    1px dotted #595;
+        border-bottom: 1px dotted #595;
+        margin-bottom: 10px;
+      }
+    }
+
+    ul {
+      padding: 0;
+
+      li {
+        list-style: none;
+        color: white;
+        a {
+          color: #bfb;
+          font-size: small;
+        }
+      }
+    }
+  }
+}
